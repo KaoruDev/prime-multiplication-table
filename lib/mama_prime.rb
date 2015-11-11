@@ -24,12 +24,13 @@ class MamaPrime
 
     if number < 4
       move_marker_forward
-      number
+      return number
     elsif is_marker_divisible_by?(2) || is_marker_divisible_by?(3)
       move_marker_forward
       return find_next_prime
     end
 
+    move_marker_forward
     number
   end
 
