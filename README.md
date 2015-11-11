@@ -1,5 +1,15 @@
 # prime-multiplication-table
 
+### Installation
+
+Tested on rubies:
+```
+1.9.3
+2.0.0
+2.1.0
+2.2.3
+```
+
 ### How to run
 
 **command**: `ruby lib/prime_table.rb arg`
@@ -27,3 +37,13 @@ prints:
   23   46   69  115  161  253  299  391  437  529  667
   29   58   87  145  203  319  377  493  551  667  841
   ````
+  
+  
+  ----
+  
+  ### Run specs
+  
+  ```
+  bundle install
+  bundle exec rspec
+  ```
