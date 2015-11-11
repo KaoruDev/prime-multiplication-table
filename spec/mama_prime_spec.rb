@@ -21,17 +21,29 @@ RSpec.describe MamaPrime do
 
     context "when passed n" do
       it "will return first n prime numbers" do
-        n = rand(1..100)
+        n = rand(100..200)
         result = mama.birth(n)
 
-        Prime.first(n).each do |prime|
-          expect(result).to include(prime)
-        end
+        expect(result.count).to eq(n)
+
+        expect(Prime.first(n).to_a).to eq(result)
       end
     end
   end
 
   describe "#find_next_prime" do
+    context "when marker is 25" do
+      it "will return 29" do
+        expect(MamaPrime.new(25).find_next_prime).to eq(29)
+      end
+    end
+
+    context "when marker is 121" do
+      it "will return 127" do
+        expect(MamaPrime.new(121).find_next_prime).to eq(127)
+      end
+    end
+
     context "when marker is 2" do
       it "will return 2" do
         expect(MamaPrime.new(2).find_next_prime).to eq(2)
