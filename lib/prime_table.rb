@@ -7,8 +7,7 @@ number_of_primes = ARGV[0]
 
 primes = MamaPrime.new.birth(number_of_primes.to_i)
 
-PrimeMultiplicationTable.new.generate(primes).to_a.each_with_index do |row, idx|
-  print row
-  print "\n"
-end
+table = PrimeMultiplicationTable.new
+table.generate(primes)
+table.print_table
 
