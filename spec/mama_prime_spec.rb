@@ -17,5 +17,19 @@ RSpec.describe MamaPrime do
       end
     end
   end
+
+  describe "#find_next_prime" do
+    context "when marker is 2" do
+      it "will return 2" do
+        expect(MamaPrime.new(2).find_next_prime).to eq(2)
+      end
+    end
+
+    context "when marker is 4" do
+      it "will return 5" do
+        expect(MamaPrime.new(4).find_next_prime).to eq(5)
+      end
+    end
+  end
 end
 
